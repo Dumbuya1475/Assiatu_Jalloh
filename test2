@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background-color: #3498db;  /* Header background color (you can adjust) */
+            color: #fff;  /* Header text color */
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        #poems {
+            margin: 20px;
+        }
+
+        .poem {
+            border: 1px solid #3498db;  /* Border color (you can adjust) */
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .comment-form {
+            margin-top: 15px;
+        }
+
+        .comments {
+            margin-top: 10px;
+        }
+
+        .comments p {
+            margin-bottom: 5px;
+        }
+
+        .interactive-elements {
+            display: flex;
+            align-items: center;
+        }
+
+        .like-button {
+            background-color: #2ecc71;  /* Like button color (you can adjust) */
+            color: #fff;  /* Like button text color */
+            padding: 8px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .like-count {
+            font-weight: bold;
+        }
+
+        .liked {
+            background-color: #e74c3c;  /* Unlike button color (you can adjust) */
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #2c3e50;  /* Dark mode background color */
+            color: #ecf0f1;  /* Dark mode text color */
+        }
+
+        header.dark-mode {
+            background-color: #34495e;  /* Dark mode header background color */
+        }
+
+        .poem.dark-mode {
+            border: 1px solid #34495e;  /* Dark mode border color */
+        }
+
+        .like-button.dark-mode {
+            background-color: #27ae60;  /* Dark mode like button color */
+            color: #fff;  /* Dark mode like button text color */
+        }
+    </style>
+    <title>Your Friend's Poems</title>
+</head>
+<body>
+    <header>
+        <h1>Your Friend's Poems</h1>
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </header>
+    
+    <section id="poems">
+        <!-- Example Poem with Comment and Like -->
+        <div class="poem" data-date="2024-01-29">
+            <h2>Whispers of Night</h2>
+            <p>This is where the poem content goes.</p>
+            <div class="interactive-elements">
+                <!-- Comment section for the poem -->
+                <h3>Comments</h3>
+                <form class="comment-form">
+                    <label for="comment">Leave a comment:</label>
+                    <textarea id="comment" name="comment" rows="4" required></textarea>
+                    <button type="button" onclick="submitComment(this)">Submit Comment</button>
+                </form>
+                <div class="comments">
+                    <!-- Comments will be displayed here -->
+                </div>
+
+                <!-- Like button for the poem -->
+                <button class="like-button" onclick="toggleLike(this)">Like</button>
+                <span class="like-count">0</span>
+            </div>
+        </div>
+        <!-- Add more poems as needed -->
+    </section>
+
+    <script>
+        // JavaScript for handling comments, likes, and dark mode
+        function submitComment(button) {
+            const form = button.closest('.comment-form');
+            const commentText = form.querySelector('textarea').value;
+
+            // Display the comment (you may want to append it to a backend or a database)
+            const commentsContainer = form.closest('.interactive-elements').querySelector('.comments');
+            const commentElement = document.createElement('p');
+            commentElement.textContent = commentText;
+            commentsContainer.appendChild(commentElement);
+
+            // Clear the textarea
+            form.querySelector('textarea').value = '';
+        }
+
+        function toggleLike(button) {
+            const likeCountElement = button.closest('.interactive-elements').querySelector('.like-count');
+            let currentLikes = parseInt(likeCountElement.textContent);
+
+            // Check if the button is already liked
+            const isLiked = button.classList.contains('liked');
+
+            if (isLiked) {
+                // Unlike the poem
+                button.classList.remove('liked');
+                currentLikes--;
+            } else {
+                // Like the poem
+                button.classList.add('liked');
+                currentLikes++;
+            }
+
+            // Update the like count
+            likeCountElement.textContent = currentLikes;
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            document.querySelectorAll('.poem, header, .like-button').forEach(element => {
+                element.classList.toggle('dark-mode');
+            });
+        }
+    </script>
+</body>
+</html>

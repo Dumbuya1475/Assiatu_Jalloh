@@ -1,0 +1,180 @@
+#poem-hero-body
+{
+    height: 40vh;
+}
+
+#poem-hero
+{
+    height: 40vh;
+}
+
+#poem-bg-filter
+{
+    height: 40vh;
+}
+
+.poem-main-container
+{
+    margin: 50px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.poem-content
+{
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.poem-container
+{
+    /* border-radius: 5px; */
+    border: 2px solid darkcyan;
+    /* background-color: #999; */
+    background-color: #eff0fe;
+    padding: 5px 20px;
+    gap: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.poem-content .poem-title
+{
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+.poem-content img
+{
+    border-radius: 50%;
+    width: 200px;
+}
+
+.interactive-element
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: larger;
+    padding: 10px 20px;
+    gap: 20px;
+    width: max-content;
+    border: none;
+    border-radius: 0px 50px 50px 50px;
+    border-bottom: 2px solid darkcyan;
+    border-left: 2px solid darkcyan;
+    border-right: 2px solid darkcyan;
+    background-color: #eff0fe;
+}
+
+.interactive-element img
+{
+    width: 30px;
+}
+
+.like-button {
+    background-color: #2ecc71;  /* Like button color (you can adjust) */
+    color: #fff;  /* Like button text color */
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.like-count {
+    font-weight: bold;
+}
+
+.liked {
+    background-color: #e74c3c;  /* Unlike button color (you can adjust) */
+}
+
+#poem-dis
+{
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/* ====================================porm1 style start================================ */
+.poem-container-1
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.poem-container-1 .content
+{
+    padding: 20px;
+    text-align: center;
+    line-height: 1.5;
+    font-size: larger;
+}
+
+.heading
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    font-size: 2rem;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    background-color: #eff0fe;
+}
+.read-poem-content
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+}
+
+.interactive-element-container
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.interactive-element button
+{
+    padding: 10px;
+    width: max-content;
+    color: #000;
+    font-size: large;
+    /* height: 2px; */
+}
+.interactive-element textarea
+{
+    resize: none;
+    /* width: 100%; */
+    border: 2px solid darkcyan;
+    outline: #2ecc71;
+    font-size: large;
+    padding: 5px 15px;
+    border-radius: 50px;
+}
+.interactive-element-min img
+{
+    width: 30px;
+}
+/* ====================================porm1 style end================================ */
+#poems {
+    margin: 20px;
+}
+
+.poem {
+    border: 1px solid bottle green;
+    /* padding: 10px; */
+    margin-bottom: 15px;
+}
+

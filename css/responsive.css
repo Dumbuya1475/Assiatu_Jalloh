@@ -1,0 +1,482 @@
+/* ====================Responsive======================= */
+/* Tablet and desktop screen wider 786px*/
+@media (min-width: 760px) {
+    body {
+        /* background-color: red; */
+    }
+}
+
+/* Tablet in land scape */
+@media (min-width: 600px) and (max-width: 767px)
+{
+    body
+    {
+        /* background-color: gray; */
+	}
+
+    .hero-body
+    {
+        justify-content: space-around;
+        height: 100vh;
+        gap: 1px;
+    }
+
+    .hero-body .description
+    {
+        width: 300px;
+        line-height: 1.4;
+    }
+    
+    .container .content
+    {
+        margin: 50px 0;
+    }
+
+.container .content .title-bar
+{
+    font-size: x-large;
+}
+
+.content-box
+{
+    margin: 20px;
+}
+
+.content .content-box img
+{
+    border-radius: 50%;
+    width: 200px;
+}
+
+.content-box .about-me h1
+{
+    margin-bottom: 15px;
+}
+
+.content-box .about-me h4
+{
+    margin-bottom: 8px;
+}
+
+.content-box .about-me
+{
+    gap: 30px;
+    justify-content: space-around;
+    margin: 0 0px;
+    text-align: left;
+}
+
+.content-box .text-box
+{
+    margin: 20px 0;
+    font-size: large;
+}
+
+.idea-content-filter .text-box
+{
+    font-size: 1rem;
+    padding: 20px;
+}
+.idea-content-filter img
+{
+    width: 200px;
+}
+.link
+{
+    gap: 0px;
+    margin: 5px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.contact-container
+{
+    padding: 50px 50px;
+    gap: 100px;
+}
+
+.contact h3
+{
+    font-size: 1.3rem;
+}
+
+.link img
+{
+    border-radius: 50%;
+    width: 30px;
+}
+footer
+{
+    padding: 10px 10px;
+    text-align: right;
+
+}
+
+    .hero-body img
+    {
+        border-radius: 2px;
+        border: 5px solid white;
+        width: 250px;
+        margin-bottom: 0px;
+    }
+}
+
+/* Tablet and phone in poitrate */
+@media (min-width: 480px) and (max-width: 599px)
+{
+	body
+	{
+		/* background-color: yellow; */
+	}
+
+    header nav ul
+    {
+        background-color: red;
+        display: none;
+    }
+
+    .hero-body
+    {
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+        gap: 0px;
+    }
+
+    .hero-body img
+    {
+        border-radius: 2px;
+        border: 2px solid white;
+        width: 150px;
+        margin-bottom: 0px;
+    }
+
+    .hero-body .description
+    {
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        line-height: 1.2;
+    }
+    
+    .hero-body .description #name1,
+    .hero-body .description #name2,
+    .hero-body .description #name3
+    {
+        font-size: 2rem;
+    }
+
+    .hero-body .description #name2
+    {
+        font-size: 2rem;
+        margin-left: 50px;
+    }
+    
+    .container .content
+    {
+        margin: 50px 0;
+    }
+
+    .container .content .title-bar
+    {
+        font-size: x-large;
+    }
+
+    .content-box
+    {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .content .content-box img
+    {
+        border-radius: 50%;
+        width: 220px;
+    }
+
+    .content-box .about-me h1
+    {
+        margin-bottom: 15px;
+        font-size: xx-large;
+    }
+
+    .content-box .about-me h4
+    {
+        margin-bottom: 8px;
+    }
+
+    .content-box .about-me
+    {
+        gap: 0px;
+        flex-direction: column;
+        margin: 0 0px;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    .content-box .text-box
+    {
+        margin: 20px 0;
+        font-size: large;
+    }
+
+
+    .idea-content-filter
+    {
+        padding: 40px 0;
+    }
+
+    .idea-content-filter img
+    {
+        border-radius: 50%;
+        border: 2px solid darkcyan;
+        width: 200px;
+    }
+
+    .idea-content-filter .text-box
+    {
+        font-size: 17px;
+        line-height: 1.5;
+        text-align: center;
+        width: 300px;
+    }
+
+    .link
+    {
+        gap: 0px;
+        margin: 5px 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #000;
+    }
+
+    .contact-container
+    {
+        padding: 50px 50px;
+        gap: 100px;
+    }
+
+    .contact h3
+    {
+        font-size: 1.3rem;
+    }
+
+    .link img
+    {
+        border-radius: 50%;
+        width: 30px;
+    }
+    footer
+    {
+        padding: 10px 10px;
+        text-align: right;
+
+    }
+}
+
+/* responsive small screen */
+@media(max-width: 576px)
+{
+    body
+    {
+        /* background-color: turquoise; */
+    }
+
+    .hero-body
+    {
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+        gap: 0px;
+    }
+
+    nav ul li
+    {
+        display: none;
+    }
+
+    .hero-body img
+    {
+        border-radius: 2px;
+        border: 2px solid white;
+        width: 200px;
+        margin-bottom: 0px;
+    }
+
+    header
+    {
+        padding: 20px;
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    #navBtn
+    {
+        display: block;
+    }
+    
+    .hero-body .description
+    {
+        /* width: 400px; */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        line-height: 1.5;
+    }
+
+    .description #line
+    {
+        display: none;
+    }
+
+    .description #greeting
+    {
+        margin-left: 20px;
+    }
+    .description #title
+    {
+        font-size: 15px;
+        font-weight: normal;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .hero-body .description #name1,
+    .hero-body .description #name2,
+    .hero-body .description #name3
+    {
+        width: 300px;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .hero-body .description #name2
+    {
+        margin-left: 50px;
+    }
+    
+    .container .content
+    {
+        margin: 50px 0;
+    }
+
+    .container .content .title-bar
+    {
+        font-size: x-large;
+        display: none;
+    }
+
+    .content-box
+    {
+        flex-direction: column;
+        margin: 20px 0;
+    }
+
+    .content .content-box img
+    {
+        border-radius: 50%;
+        width: 210px;
+    }
+
+    .about-me .text-box
+    {
+        width: 300px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .content-box .about-me h1
+    {
+        margin-bottom: 15px;
+        font-size: larger;
+        margin-bottom: 9px;
+    }
+
+    .content-box .about-me h4
+    {
+        margin-bottom: 8px;
+    }
+
+    .content-box .about-me
+    {
+        gap: 0px;
+        flex-direction: column;
+        margin: 0 0px;
+        text-align: center;
+        line-height: 1.3;
+    }
+
+    .content-box .text-box
+    {
+        margin: 20px 0;
+        font-size: large;
+    }
+
+
+    .idea-content-filter
+    {
+        flex-direction: column-reverse;
+        padding: 40px 0;
+    }
+
+    .idea-content-filter img
+    {
+        border-radius: 50%;
+        border: 2px solid darkcyan;
+        width: 200px;
+    }
+
+    .idea-content-filter .text-box
+    {
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: center;
+        width: 300px;
+    }
+
+    .link
+    {
+        gap: 10px;
+        margin: 15px 0;
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .contact-container
+    {
+        flex-direction: column;
+        padding: 20px 30px;
+        margin: 0;
+        gap: 20px;
+    }
+
+    .contact h3
+    {
+        font-size: 1.3rem;
+    }
+
+    .link img
+    {
+        border-radius: 50%;
+        width: 30px;
+    }
+    footer
+    {
+        padding: 10px 10px;
+        text-align: center;
+
+    }
+}
+
+    
+}

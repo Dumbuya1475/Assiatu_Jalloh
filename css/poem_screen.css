@@ -1,0 +1,86 @@
+/* ====================Responsive======================= */
+/* Tablet and desktop screen wider 786px*/
+@media (min-width: 760px) {
+    body {
+        /* background-color: red; */
+    }
+}
+
+/* Tablet in land scape */
+@media (min-width: 600px) and (max-width: 767px)
+{
+    body
+    {
+        /* background-color: gray; */
+	}
+
+    .poem-content
+    {
+        gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+/* Tablet and phone in poitrate */
+@media (min-width: 480px) and (max-width: 599px)
+{
+	body
+	{
+		/* background-color: yellow; */
+	}
+
+    .poem-content
+    {
+        gap: 50px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* responsive small screen */
+@media(max-width: 576px)
+{
+    body
+    {
+        /* background-color: turquoise; */
+    }
+
+    .poem-content
+    {
+        gap: 0px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .poem-container
+    {
+        padding: 5px 20px;
+        gap: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .poem-content .poem-title
+    {
+        font-size: 1.5rem;
+    }
+
+    .poem-content img
+    {
+        border-radius: 50%;
+        width: 150px;
+    }
+
+    .interactive-element img
+    {
+        width: 20px;
+    }
+
+    .poem-container-1 
+    {
+        padding: 20px;
+        text-align: center;
+        line-height: 1.5;
+        font-size: larger;
+    }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="squ.png">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>Haji Assiatu Jalloh - Home</title>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="background-filter">
+            <header>
+                <div class="logo">
+                    Haji
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="#home" id="active">Home</a></li>
+                        <li onclick="smoothScroll('about')">About</li>
+                        <li><a href="poem.html">Poems</a></li>
+                        <li onclick="smoothScroll('contact')">Contact</li>
+                    </ul>
+                    <button id="navBtn"  onclick="toggleNavPanel()">☰</button>
+                </nav>
+            </header>
+
+            <!-- Navigation Panel -->
+            <div class="nav-panel">
+                <div class="nav-content">
+                    <div class="label">
+                        <h1 style="color: darkcyan;">Haji</h1>
+                        <button id="navBtn"  onclick="toggleNavPanel()">X</button>
+                    </div>
+                    <li><a href="#home" id="active">Home</a></li>
+                    <li><a href="#about"></a>About</li>
+                    <li><a href="poem.html">Poems</a></li>
+                    <li onclick="smoothScroll('contact')" onclick="toggleNavPanel()">Contact</li>
+                </div>
+            </div>
+            <div class="hero-body">
+                <div class="hero-img">
+                    <img src="img/1.png" alt="">
+                </div>
+                <div class="description">
+                    <p id="greeting">Hello I'm</p>
+                    <p id="name1">Haji</p>
+                    <p id="name2">Assiatu</p>
+                    <p id="name3">Jalloh</p>
+                    <p id="title">A poem writer <span id="line">|</span> Aspiring photographer <span id="line">|</span> An author</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <div class="title-bar" id="about">
+                <div class="title-bg-filter">
+                    <h3 onclick="smoothScroll">Profile</h3>
+                </div>
+            </div>
+
+            <div class="content-box">
+                <div class="about-me">
+                    <div class="text-box">
+                        <h1>About me</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nesciunt magnam labore natus consectetur ut ea. Aliquam voluptate rerum inventore atque illo corrupti, minima molestias necessitatibus a excepturi, est quis.</p>
+                    </div>
+                    <img src="assiatu_02-removebg-preview.png" alt="" style="background-image: url(img/title_bg.jpg);">
+                    <div class="text-box">
+                        <h1>Details</h1>
+                        <h4>Date of birth</h4>
+                        <p>
+                            July 14 2004
+                        </p>
+                        <h4>Age</h4>
+                        <p>
+                            21 Years
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content" id="ideaContent">
+            <div class="idea-content-filter">
+                <div class="text-box">
+                    <h3 style="margin-bottom: 1px; font-size: xxx-large;">Idea</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, saepe dolorum recusandae asperiores molestiae quibusdam praesentium atque aspernatur, accusantium dolor minima eligendi illum dicta, id unde exercitationem debitis beatae voluptates!
+                    </p>
+                </div>
+                <!-- <div class="img"> -->
+                <img src="-removebg-preview.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-container" id="contact">
+        <div class="contact">
+            <h3>Follow me</h3>
+            <!-- Linkedin handle -->
+            <div class="link">
+				<img src="icons/twitter (1).png" alt="">
+            	<a href="https://www.linkedin.com/in/mohamed-super-dumbuya-036034289" target="_blank" onclick="showConfirmation('LinkedIn')">LinkedIn</a>
+                <!-- <a href=""></a><img src="icons8-linkedin-72(-ldpi).png" alt=""> -->
+            </div>
+
+            <!-- Twiter handle -->
+            <div class="link">
+				<img src="icons/twitter.png" alt="">
+    			<a href="https://www.facebook.com/mohamed.sdumbuya.12?mibextid=ZbWKwL" target="_blank" onclick="showConfirmation('Facebook')">Twiter/X</a>
+            </div>
+
+            <!-- Facebook handle -->
+            <div class="link">
+				<img src="icons/facebook.png" alt="">
+				<a href="https://www.facebook.com/mohamed.sdumbuya.12?mibextid=ZbWKwL" target="_blank" onclick="showConfirmation('Facebook')">Facebook</a>
+            </div>
+        </div>
+        <div class="contact">
+            <h3>Contact me</h3>
+            <!-- WhatsApp handle -->
+            <div class="link">
+			    <img src="icons/whatsapp.png" alt="">
+				<a href="https://wa.me/+23274523500" target="_blank" onclick="showConfirmation('WhatsApp')">WhatsApp</a>
+            </div>
+
+            <!-- Email handle -->
+            <div class="link">
+			    <img src="icons/mail.png" alt="">
+			    <a href="dumbuya" target="_blank">dumbuya366@gmail.com</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>copyright Haja Asiatu Jalloh</p>
+        <!-- copyright &cpy -->
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
