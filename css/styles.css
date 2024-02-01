@@ -66,7 +66,7 @@ body {
 .hero
 {
     height: 100vh;
-    background-image: url(/img/bg.jpg);
+    background-image: url("img/bg.jpg");
     background-size: cover;
     /* background-position: fi; */
 }
@@ -271,11 +271,6 @@ header nav ul
     width: 100%;
     font-size: larger;
 }
-
-/* #ideaContent {
-    background-image: url("../img/bg.jpg");
-    background-size: cover;
-} */
 
 #ideaContent {
     background-image: url("img/bg.jpg");
