@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<body lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="squ.png">
     <link rel="stylesheet" href="css/poem.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/poem_screen.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <title>Haji Assiatu Jalloh - Poems</title>
 </head>
 
@@ -13,6 +15,8 @@
 <body>
     <div class="hero" id="poem-hero">
         <div class="background-filter" id="poem-bg-filter">
+
+            <!-- Header logo and links -->
             <header>
                 <div class="logo">
                     Haji
@@ -20,47 +24,64 @@
                 <nav>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#poems" id="active">Poems</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <!-- Add more links as needed -->
+                        <li><a href="index.html">About</a></li>
+                        <li> <a href="poem.html" id="active">Poems</a></li>
+                        <li><a href="index.html.">Contact</a></li>
                     </ul>
+                    <button id="navBtn" onclick="toggleNavPanel()">☰</button>
                 </nav>
             </header>
+
+            <!-- Navigation Panel -->
+            <div class="nav-panel">
+                <div class="nav-content">
+                    <div class="label">
+                        <h1 style="color: darkcyan;">Haji</h1>
+                        <button id="navBtn"  onclick="toggleNavPanel()">X</button>
+                    </div>
+                    <li><a href="index.html" id="active">Home</a></li>
+                    <li><a href="index.html"></a>About</li>
+                    <li><a href="poem.html">Poems</a></li>
+                    <li onclick="smoothScroll('contact')" onclick="toggleNavPanel()">Contact</li>
+                </div>
+            </div>
+
+
+            <!-- Hero body -->
             <div class="hero-body" id="poem-hero-body">
-                <!-- <div class="hero-img">
-                    <img src="1.png" alt="">
-                </div> -->
                 <div class="description" id="poem-dis">
                     <p>Enjoy reading</p>
-                    <!-- <p id="greeting">Hello I'm</p> -->
-                    <!-- <p id="name1">Haji</p> -->
-                    <!-- <p id="name2">Assiatu</p> -->
-                    <!-- <p id="name3">Jalloh</p> -->
-                    <!-- <p id="title">A poem writer | An author</p> -->
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Poem box container -->
     <div class="poem-main-container">
         <div class="poem-content">
             <div class="poem-container-1">
                 <div class="poem-container">
+                    
+                    <!-- Poem title here -->
                     <div class="poem-title">
-                        <h4>Abiku</h4>
+                        <h4>Bad Day</h4>
                     </div>
+                    <!-- Poem image here -->
                     <div class="poem-img">
                         <img src="squ.png" alt="">
                     </div>
                 </div>
+
+                <!-- Interactive elements (buttons) -->
                 <div class="interactive-element">
                     <button><a href="poem1.html">Read</a></button>
-                    <button><img src="icons/apps.png" alt=""></button>
+                    <button onclick="downloadPoem(this)" id="downloadBtn"><img src="icons/apps.png" alt=""></button>
                     <button class="like-button" onclick="toggleLike(this)">Like</button>
-                    <span class="like-count">0</span>
+                    <!-- <span class="like-count">0</span> -->
+                    <!-- <a class="download-button" onclick="downloadPoem(this)">Download</a> -->
                 </div>
             </div>
+
             <div class="poem-container-1">
                 <div class="poem-container">
                     <div class="poem-title">
@@ -72,11 +93,12 @@
                 </div>
                 <div class="interactive-element">
                     <button><p>Read</p></button>
-                    <button><img src="icons/apps.png" alt=""></button>
+                    <button onclick="downloadPoem(this)" id="downloadBtn"><img src="icons/apps.png" alt=""></button>
                     <button class="like-button" onclick="toggleLike(this)">Like</button>
-                    <span class="like-count">0</span>
+                    <!-- <span class="like-count">0</span> -->
                 </div>
             </div>
+            
             <div class="poem-container-1">
                 <div class="poem-container">
                     <div class="poem-title">
@@ -88,11 +110,12 @@
                 </div>
                 <div class="interactive-element">
                     <button><p>Read</p></button>
-                    <button><img src="icons/apps.png" alt=""></button>
+                    <button onclick="downloadPoem(this)" id="downloadBtn"><img src="icons/apps.png" alt=""></button>
                     <button class="like-button" onclick="toggleLike(this)">Like</button>
-                    <span class="like-count">0</span>
+                    <!-- <span class="like-count">0</span> -->
                 </div>
             </div>
+            
             <div class="poem-container-1">
                 <div class="poem-container">
                     <div class="poem-title">
@@ -104,14 +127,61 @@
                 </div>
                 <div class="interactive-element">
                     <button><p>Read</p></button>
-                    <button><img src="icons/apps.png" alt=""></button>
+                    <button onclick="downloadPoem(this)" id="downloadBtn"><img src="icons/apps.png" alt=""></button>
                     <button class="like-button" onclick="toggleLike(this)">Like</button>
-                    <span class="like-count">0</span>
+                    <!-- <span class="like-count">0</span> -->
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Footer area -->
+    <div class="contact-container" id="contact">
+        <div class="contact">
+            <h3>Follow me</h3>
+
+            <!-- Linkedin handle -->
+            <div class="link">
+				<img src="icons/linkedin.png" alt="">
+            	<a href="https://www.linkedin.com/in/mohamed-super-dumbuya-036034289" target="_blank" onclick="showConfirmation('LinkedIn')">LinkedIn</a>
+            </div>
+
+            <!-- Twiter handle -->
+            <div class="link">
+				<img src="icons/twitter.png" alt="">
+    			<a href="https://www.facebook.com/mohamed.sdumbuya.12?mibextid=ZbWKwL" target="_blank" onclick="showConfirmation('Facebook')">Twiter/X</a>
+            </div>
+
+            <!-- Facebook handle -->
+            <div class="link">
+				<img src="icons/facebook.png" alt="">
+				<a href="https://www.facebook.com/assiatu.jalloh.758" target="_blank" onclick="showConfirmation('Facebook')">Facebook</a>
+            </div>
+        </div>
+
+        <!-- Contact me area -->
+        <div class="contact">
+            <h3>Contact me</h3>
+        
+            <!-- WhatsApp handle -->
+            <div class="link">
+			    <img src="icons/whatsapp.png" alt="">
+				<a href="https://wa.me/+23279755228" target="_blank" onclick="showConfirmation('WhatsApp')">WhatsApp</a>
+            </div>
+
+            <!-- Email handle -->
+            <div class="link">
+			    <img src="icons/mail.png" alt="">
+			    <a href="dumbuya" target="_blank">dumbuya366@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>copyright Haja Asiatu Jalloh</p>
+        <!-- copyright &cpy -->
+    </footer></body>
+<script src="js/script.js"></script>
+<script src="js/poem.js"></script>
 </body>
-    <script src="js/script.js"></script>
-    <script src="js/poem.js"></script>
 </html>

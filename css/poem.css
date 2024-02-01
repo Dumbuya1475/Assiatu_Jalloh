@@ -1,6 +1,26 @@
+/* ================================header style start=============================== */
+nav ul li
+{
+    display: block;
+}
+
+/* #navBtn
+{
+    display: block;
+} */
+/* ================================header style end=============================== */
+
 #poem-hero-body
 {
     height: 40vh;
+    padding: 0;
+    margin: 0;
+}
+
+.hero-poem-body
+{
+    padding: 0;
+    margin: 0;
 }
 
 #poem-hero
@@ -78,7 +98,7 @@
 }
 
 .like-button {
-    background-color: #2ecc71;  /* Like button color (you can adjust) */
+    background-color: #2ecc71;
     color: #fff;  /* Like button text color */
     padding: 8px;
     border: none;
@@ -102,6 +122,13 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+#downloadBtn
+{
+    border: none;
+    width: 45px;
+    padding: 10px;
+    border-radius: 50%;
+}
 
 /* ====================================porm1 style start================================ */
 .poem-container-1
@@ -151,25 +178,56 @@
     width: max-content;
     color: #000;
     font-size: large;
-    /* height: 2px; */
+    border: 1px solid lightseagreen;
+    border-radius: 20% ;
 }
 .interactive-element textarea
 {
     resize: none;
-    /* width: 100%; */
     border: 2px solid darkcyan;
     outline: #2ecc71;
     font-size: large;
     padding: 5px 15px;
     border-radius: 50px;
 }
+
+.interactive-element-min button
+{
+    border: none;
+    padding: 0px;
+    border-radius: 50%;
+}
 .interactive-element-min img
 {
     width: 30px;
+    height: auto;
+    /* background-color: red; */
+    padding: 5px;
+    margin: 0;
+    border-radius: 50%;
+    border: none;
+}
+
+#downloadPoem1
+{
+    padding: 20px;
+    width: 200px;
+    font-size: x-large;
+    background-color: lightseagreen;
+    color: lightgreen;
+    border: none;
+    border-radius: 50px;
 }
 /* ====================================porm1 style end================================ */
+
+.download-button
+{
+    cursor: pointer;
+}
+
 #poems {
     margin: 20px;
+    margin: 23px
 }
 
 .poem {

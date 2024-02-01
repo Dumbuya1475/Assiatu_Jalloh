@@ -4,6 +4,21 @@
     body {
         /* background-color: red; */
     }
+
+    .hero-body
+    {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* gap: 100px; */
+        margin-top: 30px;
+        padding: 20px;
+    }
+
+    .content-box .about-me
+    {
+        padding-bottom: 70px;
+    }
 }
 
 /* Tablet in land scape */
@@ -135,7 +150,6 @@ footer
 
     header nav ul
     {
-        background-color: red;
         display: none;
     }
 
@@ -323,6 +337,12 @@ footer
         display: block;
     }
     
+    #poem-dis
+    {
+        margin-bottom: 100px;
+        line-height: 1.2;
+        font-size: 2.5rem;
+    }
     .hero-body .description
     {
         /* width: 400px; */
@@ -363,11 +383,6 @@ footer
         margin-left: 50px;
     }
     
-    .container .content
-    {
-        margin: 50px 0;
-    }
-
     .container .content .title-bar
     {
         font-size: x-large;
@@ -476,7 +491,4 @@ footer
         text-align: center;
 
     }
-}
-
-    
 }

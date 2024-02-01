@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add this line in the head section of your HTML file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+
+    <title>Your Friend's Poems</title>
+</head>
+<body>
+    <header>
+        <h1>Your Friend's Poems</h1>
+    </header>
+
+    <section id="poems">
+    
+        <!-- Example Poem with Comment, Like, and Download -->
+<div class="poem" data-date="2024-01-29">
+    <h2>Whispers of Night</h2>
+    <div class="poem-text">This is where the poem content goes.</div>
+    <div class="interactive-elements">
+        <!-- ... (rest of the interactive elements) -->
+        <a class="download-button" onclick="downloadPoem(this)">Download</a>
+    </div>
+</div>
+
+    </section>
+
+    <script>
+
+
+
+function downloadPoem(downloadButton) {
+    const poemContainer = downloadButton.closest('.poem');
+    const poemText = poemContainer.querySelector('.poem-text').textContent;
+
+    // Create a div to contain the poem text with specific styling
+    const poemTextContainer = document.createElement('div');
+    poemTextContainer.style.textAlign = 'center';
+    poemTextContainer.textContent = poemText;
+
+    // Use html2pdf to generate a PDF from the poem text container
+    html2pdf(poemTextContainer, {
+        margin: 10,
+        filename: 'poem.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    });
+}
+
+
+    </script>
+</body>
+</html>

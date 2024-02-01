@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/x-icon" href="squ.png">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive.css">
     <title>Haji Assiatu Jalloh - Home</title>
 </head>
@@ -12,11 +12,14 @@
 <body>
     <div class="hero">
         <div class="background-filter">
+
+            <!-- Header logo and links -->
             <header>
                 <div class="logo">
-                    Haji
+                    Hasjal
                 </div>
 
+                <!-- Header link -->
                 <nav>
                     <ul>
                         <li><a href="#home" id="active">Home</a></li>
@@ -32,15 +35,18 @@
             <div class="nav-panel">
                 <div class="nav-content">
                     <div class="label">
-                        <h1 style="color: darkcyan;">Haji</h1>
+                        <h1 style="color: darkcyan;">Hasjal</h1>
                         <button id="navBtn"  onclick="toggleNavPanel()">X</button>
                     </div>
                     <li><a href="#home" id="active">Home</a></li>
-                    <li><a href="#about"></a>About</li>
+                    <li onclick="smoothScroll('panel-about')">About</li>
+                    <!-- <li><a href="#about"></a>About</li> -->
                     <li><a href="poem.html">Poems</a></li>
                     <li onclick="smoothScroll('contact')" onclick="toggleNavPanel()">Contact</li>
                 </div>
             </div>
+
+            <!-- Hero Body -->
             <div class="hero-body">
                 <div class="hero-img">
                     <img src="img/1.png" alt="">
@@ -56,86 +62,95 @@
         </div>
     </div>
 
-    <div class="container">
+    <!-- Home main container  -->
+    <div class="container" id="about">
         <div class="content">
-            <div class="title-bar" id="about">
+            <div class="title-bar">
                 <div class="title-bg-filter">
                     <h3 onclick="smoothScroll">Profile</h3>
                 </div>
             </div>
 
-            <div class="content-box">
+            <div class="content-box" id="panel-about">
                 <div class="about-me">
                     <div class="text-box">
                         <h1>About me</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nesciunt magnam labore natus consectetur ut ea. Aliquam voluptate rerum inventore atque illo corrupti, minima molestias necessitatibus a excepturi, est quis.</p>
+                        <p>
+                            I am  Haja Assiatu Jalloh a friend of few, I am aspiring photographer,vediographer, therapist and content creator
+                            I can be very creative when bored ☺
+                        </p>
                     </div>
-                    <img src="assiatu_02-removebg-preview.png" alt="" style="background-image: url(img/title_bg.jpg);">
+                    <img src="assiatu_02-removebg-preview.png" alt=""  style="background-image: url(img/title_bg.jpg);">
                     <div class="text-box">
-                        <h1>Details</h1>
-                        <h4>Date of birth</h4>
-                        <p>
-                            July 14 2004
-                        </p>
-                        <h4>Age</h4>
-                        <p>
-                            21 Years
-                        </p>
+                        <h1>Personal Details</h1>
+                        <h4>Date of birth: <span id="sub">July 14 2001</span></h4>
+                        <h4>Age: <span id="sub">21 Years</span></h4>
+                        <h1>Education</h1>
+                        <h4>Completed SSS: <span id="sub">January 1 2023</span></h4>
+                        <h1>Other Skill</h1>
+                        <h4>Dancing</h4>
+                        <h4>Singing</h4>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Idea container -->
         <div class="content" id="ideaContent">
             <div class="idea-content-filter">
                 <div class="text-box">
-                    <h3 style="margin-bottom: 1px; font-size: xxx-large;">Idea</h3>
+                    <h3 style="margin-bottom: 1px; font-size: xxx-large;">Intrested</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, saepe dolorum recusandae asperiores molestiae quibusdam praesentium atque aspernatur, accusantium dolor minima eligendi illum dicta, id unde exercitationem debitis beatae voluptates!
+                        I am intrested in content creating stuff
                     </p>
                 </div>
-                <!-- <div class="img"> -->
                 <img src="-removebg-preview.png" alt="">
             </div>
         </div>
     </div>
 
+    <!-- Footer area -->
     <div class="contact-container" id="contact">
         <div class="contact">
             <h3>Follow me</h3>
+
             <!-- Linkedin handle -->
             <div class="link">
-				<img src="icons/twitter (1).png" alt="">
+				<img src="icons/linkedin.png" alt="">
             	<a href="https://www.linkedin.com/in/mohamed-super-dumbuya-036034289" target="_blank" onclick="showConfirmation('LinkedIn')">LinkedIn</a>
-                <!-- <a href=""></a><img src="icons8-linkedin-72(-ldpi).png" alt=""> -->
             </div>
 
             <!-- Twiter handle -->
             <div class="link">
 				<img src="icons/twitter.png" alt="">
-    			<a href="https://www.facebook.com/mohamed.sdumbuya.12?mibextid=ZbWKwL" target="_blank" onclick="showConfirmation('Facebook')">Twiter/X</a>
+    			<a href="https://www.twitter.com/mohamed.sdumbuya.12?mibextid=ZbWKwL" target="_blank" onclick="showConfirmation('Facebook')">Twiter/X</a>
             </div>
 
             <!-- Facebook handle -->
             <div class="link">
 				<img src="icons/facebook.png" alt="">
-				<a href="https://www.facebook.com/mohamed.sdumbuya.12?mibextid=ZbWKwL" target="_blank" onclick="showConfirmation('Facebook')">Facebook</a>
+				<a href="https://www.facebook.com/assiatu.jalloh.758" target="_blank" onclick="showConfirmation('Facebook')">Facebook</a>
             </div>
         </div>
+
+        <!-- Contact me area -->
         <div class="contact">
             <h3>Contact me</h3>
+        
             <!-- WhatsApp handle -->
             <div class="link">
 			    <img src="icons/whatsapp.png" alt="">
-				<a href="https://wa.me/+23274523500" target="_blank" onclick="showConfirmation('WhatsApp')">WhatsApp</a>
+				<a href="https://wa.me/+23279755228" target="_blank" onclick="showConfirmation('WhatsApp')">WhatsApp</a>
             </div>
 
             <!-- Email handle -->
             <div class="link">
 			    <img src="icons/mail.png" alt="">
-			    <a href="dumbuya" target="_blank">dumbuya366@gmail.com</a>
+			    <a href="https://gmail/dumbuya366@gmail.com" target="_blank">dumbuya366@gmail.com</a>
             </div>
         </div>
     </div>
+
     <footer>
         <p>copyright Haja Asiatu Jalloh</p>
         <!-- copyright &cpy -->

@@ -3,42 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="squ.png">
     <link rel="stylesheet" href="css/poem.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/dark_mood.css">
-    <title>Haji Assiatu Jalloh - Poems</title>
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>Hasjal - Poems</title>
 </head>
 
+<!-- Poem 1 (read page) -->
 <!-- ☰ -->
 <body>
     <div class="hero" id="poem-hero">
         <div class="background-filter" id="poem-bg-filter">
             <header>
                 <div class="logo">
-                    Haji
+                    Hasjal
                 </div>
                 <nav>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="#about">About</a></li>
+                        <!-- <li><a href="index.html">About</a></li> -->
                         <li><a href="#poems" id="active">Poems</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <!-- Add more links as needed -->
+                        <!-- <li><a href="#contact">Contact</a></li> -->
+                        <li onclick="smoothScroll('contact')" onclick="toggleNavPanel()">Contact</li>
                     </ul>
+                        <button id="navBtn"  onclick="toggleNavPanel()">☰</button>
                 </nav>
             </header>
+
+            <!-- Navigation Panel -->
+            <div class="nav-panel">
+                <div class="nav-content">
+                    <div class="label">
+                        <h1 style="color: darkcyan;">Hasjal</h1>
+                        <button id="navBtn"  onclick="toggleNavPanel()">X</button>
+                    </div>
+                    <li><a href="index.html" id="active">Home</a></li>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="poem.html">Poems</a></li>
+                    <li onclick="smoothScroll('contact')" onclick="toggleNavPanel()">Contact</li>
+                </div>
+            </div>
+
             <div class="hero-body" id="poem-hero-body">
-                <!-- <div class="hero-img">
-                    <img src="1.png" alt="">
-                </div> -->
                 <div class="description" id="poem-dis">
-                    <p>Poem: Abiku</p>
+                    <p>Poem: Bad Day</p>
                     <p>Enjoy reading</p>
-                    <!-- <p id="greeting">Hello I'm</p> -->
-                    <!-- <p id="name1">Haji</p> -->
-                    <!-- <p id="name2">Assiatu</p> -->
-                    <!-- <p id="name3">Jalloh</p> -->
-                    <!-- <p id="title">A poem writer | An author</p> -->
                 </div>
             </div>
         </div>
@@ -52,44 +63,38 @@
                         Abiku
                     </div>
                     <div class="interactive-element-min">
-                        <!-- <img src="icons/blink.jpg" alt=""> -->
-                        <!-- <button onclick="toggleDarkMode()">Toggle Dark Mode</button> -->
-                        <button onclick="toggleDarkMode()"><img src="icons/brightness-and-contrast.png" alt=""></button>
-                        <img src="icons/brightness-and-contrast.png" alt="">
-                        <img src="icons/brightness-and-contrast.png" alt="">
+                        <button class="dar-bri" onclick="toggleDarkMode()"><img src="icons/brightness-and-contrast.png" alt=""></button>
+                        <button><img src="icons/chatbot.png" alt=""></button>
+                        <button><img src="icons/headphones.png" alt=""></button>
                     </div>
                 </div>
                 <div class="content">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis quae doloribus facere, distinctio laboriosam animi sunt suscipit pariatur, consectetur sit vero blanditiis iste rerum, ratione quo impedit maiores perspiciatis? Delectus.</p>
-                    <br>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis quae doloribus facere, distinctio laboriosam animi sunt suscipit pariatur, consectetur sit vero blanditiis iste rerum, ratione quo impedit maiores perspiciatis? Delectus.</p>
-                    <br>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis quae doloribus facere, distinctio laboriosam animi sunt suscipit pariatur, consectetur sit vero blanditiis iste rerum, ratione quo impedit maiores perspiciatis? Delectus.</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis quae doloribus facere, distinctio laboriosam animi sunt suscipit pariatur, consectetur sit vero blanditiis iste rerum, ratione quo impedit maiores perspiciatis? Delectus.</p>
+                    <p>
+                        <p>BAD DAY</p>
+                        <p>My mind is sick</p>
+                        <p>My mood is sad It has been a week And it's getting mad Tomorrow is Eid</p>
+                        <p>What's up with me?</p>
+                        <br>
+                        <p>Nothing smells favourable</p>
+                        <p>All I sight is unpleasant Nothing match my mood</p>
+                        <p>The day become my enemy</p>
+                        <p>Whilst the night is uninviting</p>
+                        <br>
+                        <p>I am lost in the mid of a</p>
+                        <p>desert where I couldn'</p>
+                        <p>differ the Cardinal</p>
+                        <p>directions</p>
+                        <br>
+                        <p>I am hopeless With thoughtless actions.</p>
+                        <p>Is this depression or what?</p>
+                        <br>
+                        <h3>... Hasjal....</h3>
                 </div>
-                
-                </div>
-                <!-- <div class="interactive-element-container">
-                    <div class="interactive-element">
-                        <button><p>Read</p></button>
-                <button class="like-button" onclick="toggleLike(this)">Like</button>
-                <span class="like-count">0</span>
-                        <button><img src="icons/apps.png" alt=""></button>
-                        <button class="like-button" onclick="toggleLike(this)">Like</button>
-                        <span class="like-count">0</span>
-                    </div>
-                    <div class="interactive-element">
-                        <textarea id="comment" name="comment" rows="0" cols="50"></textarea>
-                        <button type="button" onclick="submitComment(this)">Drop</button>
-                    </div> -->
-                    <!-- <div class="comments"> -->
-                        <!-- Comments will be displayed here -->
-                    <!-- </div> -->
-                <!-- </div> -->
+            </div>
+            <button id="downloadPoem1">Download</button>
         </div>
     </div>
-    <script src="js/script.js"></script>
-    <script src="js/poem.js"></script>
-    <!-- <script src="js/poem.js"></script> -->
 </body>
+<script src="js/script.js"></script>
+<script src="js/poem.js"></script>
 </html>

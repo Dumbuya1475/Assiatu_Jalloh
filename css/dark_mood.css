@@ -1,8 +1,9 @@
 /* Dark Mode Styles */
-body.dark-mode {
+body.dark-mode
+{
     background-color: #000;
     /* background-image: url(/img/bg.jpg); */
-    color: #ecf0f1;  /* Dark mode text color */
+    color: #ecf0f1;
 }
 
 .heading.dark-mode
@@ -18,4 +19,9 @@ body.dark-mode {
 .like-button.dark-mode {
     background-color: #27ae60;  /* Dark mode like button color */
     color: #fff;  /* Dark mode like button text color */
+}
+
+.dar-bri.dark-mode
+{
+    background-color: #fff;
 }

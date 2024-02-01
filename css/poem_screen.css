@@ -4,6 +4,13 @@
     body {
         /* background-color: red; */
     }
+
+    .hero-body
+    {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
 }
 
 /* Tablet in land scape */
@@ -82,5 +89,37 @@
         text-align: center;
         line-height: 1.5;
         font-size: larger;
+    }
+    .hero-body
+    {
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+        gap: 0px;
+    }
+
+    nav ul li
+    {
+        display: none;
+    }
+
+    .hero-body img
+    {
+        border-radius: 2px;
+        border: 2px solid white;
+        width: 200px;
+        margin-bottom: 0px;
+    }
+
+    header
+    {
+        padding: 20px;
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    #navBtn
+    {
+        display: block;
     }
 }

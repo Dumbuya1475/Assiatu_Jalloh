@@ -1,0 +1,105 @@
+https://dumbuya1475.github.io/Assiatu_Jalloh/
+
+https://www.facebook.com/assiatu.jalloh.758
+
+<!-- Example Poem with Comment, Like, and Download -->
+<div class="poem" data-date="2024-01-29">
+    <h2>Whispers of Night</h2>
+    <p>This is where the poem content goes.</p>
+    <div class="interactive-elements">
+        <!-- Comment section for the poem -->
+        <h3>Comments</h3>
+        <form class="comment-form">
+            <label for="comment">Leave a comment:</label>
+            <textarea id="comment" name="comment" rows="4" required></textarea>
+            <button type="button" onclick="submitComment(this)">Submit Comment</button>
+        </form>
+        <div class="comments">
+            <!-- Comments will be displayed here -->
+        </div>
+
+        <!-- Like button for the poem -->
+        <button class="like-button" onclick="toggleLike(this)">Like</button>
+        <span class="like-count">0</span>
+
+        <!-- Download button for the poem -->
+        <a class="download-button" onclick="downloadPoem(this)">Download</a>
+    </div>
+</div>
+
+function downloadPoem(downloadButton) {
+    const poemContent = downloadButton.closest('.poem').querySelector('p').textContent;
+    const blob = new Blob([poemContent], { type: 'text/plain' });
+
+    const a = document.createElement('a');
+    const url = window.URL.createObjectURL(blob);
+    a.href = url;
+    a.download = 'poem.txt';  // You can set the desired filename here
+    document.body.appendChild(a);
+    a.click();
+
+    // Cleanup
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}
+
+
+Certainly! You can add a download feature to allow users to download the poem content. One way to achieve this is by using the `download` attribute for a link (`<a>`) element. Here's an example modification to your code:
+
+```html
+<!-- Example Poem with Comment, Like, and Download -->
+<div class="poem" data-date="2024-01-29">
+    <h2>Whispers of Night</h2>
+    <p>This is where the poem content goes.</p>
+    <div class="interactive-elements">
+        <!-- Comment section for the poem -->
+        <h3>Comments</h3>
+        <form class="comment-form">
+            <label for="comment">Leave a comment:</label>
+            <textarea id="comment" name="comment" rows="4" required></textarea>
+            <button type="button" onclick="submitComment(this)">Submit Comment</button>
+        </form>
+        <div class="comments">
+            <!-- Comments will be displayed here -->
+        </div>
+
+        <!-- Like button for the poem -->
+        <button class="like-button" onclick="toggleLike(this)">Like</button>
+        <span class="like-count">0</span>
+
+        <!-- Download button for the poem -->
+        <a class="download-button" onclick="downloadPoem(this)">Download</a>
+    </div>
+</div>
+```
+
+And you can add the following JavaScript function to handle the download:
+
+```javascript
+function downloadPoem(downloadButton) {
+    const poemContent = downloadButton.closest('.poem').querySelector('p').textContent;
+    const blob = new Blob([poemContent], { type: 'text/plain' });
+
+    const a = document.createElement('a');
+    const url = window.URL.createObjectURL(blob);
+    a.href = url;
+    a.download = 'poem.txt';  // You can set the desired filename here
+    document.body.appendChild(a);
+    a.click();
+
+    // Cleanup
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}
+```
+
+This JavaScript function `downloadPoem` does the following:
+
+1. Grabs the poem content (text) from the closest `.poem` element.
+2. Creates a Blob (Binary Large Object) from the text content.
+3. Creates a temporary link (`<a>`) element.
+4. Sets the link's `href` attribute to a URL representing the Blob.
+5. Sets the `download` attribute to specify the desired filename (in this case, "poem.txt").
+6. Appends the link to the document, triggers a click on the link, and then removes the link.
+
+This will prompt the user to download the poem as a text file when they click the "Download" button. Adjust the filename and file type according to your preferences.

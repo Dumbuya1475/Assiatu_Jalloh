@@ -36,7 +36,7 @@ function toggleLike(button) {
 
 function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
-    document.querySelectorAll('.poem, header, .like-button, .heading').forEach(element => {
+    document.querySelectorAll('.poem, header, .like-button, .dar-bri, .heading').forEach(element => {
         element.classList.toggle('dark-mode');
     });
 }
