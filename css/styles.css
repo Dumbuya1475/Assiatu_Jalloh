@@ -274,9 +274,10 @@ header nav ul
 
 #ideaContent
 {
-    background-image: url(/img/bg.jpg);
+    background-image: url("/img/bg.jpg");
     background-size: cover;
 }
+
 
 .content .idea-content-filter
 {
