@@ -272,11 +272,15 @@ header nav ul
     font-size: larger;
 }
 
-#ideaContent {
+/* #ideaContent {
     background-image: url("../img/bg.jpg");
     background-size: cover;
-}
+} */
 
+#ideaContent {
+    background-image: url("img/bg.jpg");
+    background-size: cover;
+}
 
 
 .content .idea-content-filter
